@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>2022/10</title>
+    </head>
+    <body>
+        <h1>
+            歡迎來到yimang的部落格
+        </h1>
+        <p>
+            史上最陽春的網站
+        </p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">點擊這裡展開奇妙冒險</a>
+        
+        <br/>
+        <hr/>
+
+    </body>
+</html>

@@ -26,14 +26,35 @@
   
         <br/>
         <br/>
-        <h1>
+        <h2>
             關於我的麥塊伺服器
-        </h1>
+        </h2>
         <br/>
         <h3>
+            <b><I>IP</I></b> : mc.yimang.cf&emsp; 
 
-       
+            <textarea readonly id="copyText" style="position:absolute;left:-9999px">
+                mc.yimang.cf
+            </textarea>
+                <button type="button" onclick="copyEvent('copyText')">點擊複製</button>
+            
+            <script>
+                function copyEvent(id)
+                {
+                    var str = document.getElementById(id);
+                    window.getSelection().selectAllChildren(str);
+                    document.execCommand("Copy")
+                }
+            </script> 
+            <br/>
+            CPU:200%<br/>
+            記憶體:4096MB<br/>
+            儲存空間:10240MB<br/>
         </h3>
+        <br/>
+        <h2>
+            下面是一些伺服器的風景照
+        </h2>
 
         <h2>
             <a href="../index.html">回到首頁</a>

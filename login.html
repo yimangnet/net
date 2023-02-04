@@ -85,13 +85,19 @@ function checkCookie() {
 checkCookie(); 
 
 var username = getCookie('username');
+if (username == null || username == ""){
 
+document.write('<h3>使用者尚未登入!</h3>');
+    }
+else{
 document.write('<h1>歡迎登入:</h2>');
 document.write("<h2>");
 document.write("用戶:"+ username);
 document.write("</h2>");
+}
 
 </script> 
+<br/>
 <input type="button" class='btnclass' value="登出(無法使用)">
 <p class='logout'></p>
 

@@ -2,7 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>cookie測試</title>
+        <title>使用者登入</title>
         <link rel="shortcut icon" href="img/sherry.ico" type="image/x-icon">
         <style>
             h1.one{display:inline}
@@ -27,7 +27,7 @@ function WriteCookie()
 </head>
 <body>
 <form name="myform" action="">
-請輸入使用者名稱: <input type="text" name="customer"/>
+請輸入使用者名稱(僅限英文和數字組合): <input type="text" name="customer"/>
 <input type="button" value="確認" onclick="WriteCookie();"/>
 </form>
 <br/>
@@ -66,8 +66,10 @@ function getCookie (name)
 }
 
 var username = getCookie('username');
-document.write('<h2>歡迎登入:</h2>');
+document.write('<h1>歡迎登入:</h2>');
+document.write("<h2>");
 document.write("用戶:"+ username);
+document.write("</h2>");
 </script> 
 <br/>
 <h2><a href="index.html">回首頁</a></h2>

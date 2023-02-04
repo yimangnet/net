@@ -13,7 +13,7 @@ function parseCookie() {
 }
 
 
-function getcookie(name) {
+function getCookie(name) {
     var value = parseCookie()[name];
     if (value) {
         value = decodeURIComponent(value);
@@ -21,7 +21,7 @@ function getcookie(name) {
 
     return value;
 }
-var username = getcookie('username');
+var username = getCookie('username');
 document.write(username)
 
 

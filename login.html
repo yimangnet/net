@@ -96,6 +96,14 @@ document.write("</h2>");
 <p class='logout'></p>
 
 <script>
+    function delCookie(name)
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=getCookie(name);
+    if(cval!=null)
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
     var btn = document.querySelector('.btnclass');
     var time = document.querySelector('.logout');
 

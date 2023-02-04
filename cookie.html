@@ -31,7 +31,6 @@ function WriteCookie()
 <input type="button" value="確認" onclick="WriteCookie();"/>
 </form>
 <br/>
-
 <script>
     function parseCookie() {
     var cookieObj = {};
@@ -68,7 +67,7 @@ function getCookie (name)
 
 var username = getCookie('username');
 document.write('<h2>歡迎登入:</h2>')
-document.write(username)
+document.write("用戶:"+ username)
 </script> 
 <br/>
 <h2><a href="index.html">回首頁</a></h2>

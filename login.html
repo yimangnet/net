@@ -92,7 +92,7 @@ document.write("用戶:"+ username);
 document.write("</h2>");
 
 </script> 
-<input type="button" class='btnclass' value="登出">
+<input type="button" class='btnclass' value="登出(無法使用)">
 <p class='logout'></p>
 
 <script>
@@ -107,10 +107,8 @@ document.write("</h2>");
     var btn = document.querySelector('.btnclass');
     var time = document.querySelector('.logout');
 
-    btn.onclick = function () {
+    btn.onclick =delCookie(username);
 
-        delCookie(username);
-    };
 </script>
 </body>
 

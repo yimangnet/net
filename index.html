@@ -60,10 +60,18 @@
 
 
         var username = getCookie('username');
+        if (username == null){
+            document.write('<h3>使用尚未登入!</h3>');
+
+        }
+        else{
         document.write('<h3>目前使用者:</h3>');
         document.write('<h3>');
         document.write(username);
         document.write('</h3>');
+            
+        }
+
         
         
         </script>

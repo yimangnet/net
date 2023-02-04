@@ -1,1 +1,42 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DENOgCPSLl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<HTML>
+    <HEAD>
+    <!-- 頁籤標題 -->
+    <TITLE>vivi留言</TITLE>
+    <body>
+        <div class="content">
+            <div class="title">使用者留言</div>
+            <div class="message_box" id="messageBox"></div>
+            <div><input id="myInput" type="text" placeholder="請輸入留言內容"><button id="doPost">提交</button></div>
+        </div>
+        <script>
+
+            window.onload = function(){
+                
+                var oMessageBox = document.getElementById("messageBox");
+                var oInput = document.getElementById("myInput");
+                var oPostBtn = document.getElementById("doPost");
+                
+                oPostBtn.onclick = function(){
+                    if(oInput.value){
+                        //寫入發表留言的時間
+                        var oTime = document.createElement("div");
+                        oTime.className = "time";
+                        var myDate = new  Date();
+                        oTime.innerHTML = myDate.toLocaleString();
+                        oMessageBox.appendChild(oTime);
+                        
+                        //寫入留言內容
+                        var oMessageContent = document.createElement("div");
+                        oMessageContent.className = "message_content";
+                        oMessageContent.innerHTML = oInput.value;
+                        oInput.value = "";
+                        oMessageBox.appendChild(oMessageContent);
+                    }
+                    
+                }
+                
+            }
+        
+        </script>
+    </body>
+    </HTML>

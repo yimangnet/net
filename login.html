@@ -90,8 +90,21 @@ document.write('<h1>歡迎登入:</h2>');
 document.write("<h2>");
 document.write("用戶:"+ username);
 document.write("</h2>");
-<button onclick="delCookie(username) ">登出</button>
+
 </script> 
+<input type="button" class='btnclass' value="登出">
+<p class='logout'></p>
+
+<script>
+    var btn = document.querySelector('.btnclass');
+    var time = document.querySelector('.logout');
+
+    btn.onclick = function () {
+
+        delCookie(username);
+    };
+</script>
+</body>
 
 <br/>
 

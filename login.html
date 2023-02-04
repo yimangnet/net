@@ -65,9 +65,14 @@ function getCookie (name)
 	return null;
 }
 
-function clearCookie(name) {  
-    setCookie(name, "", -1);  
-}  
+function delCookie(name)
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=getCookie(name);
+    if(cval!=null)
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
 function checkCookie() {
     var user = getCookie("username");
     if (user != null) {
@@ -86,7 +91,7 @@ document.write("</h2>");
 <br/>
 
 <h2>
-    <input type="button" value="登出" onclick="chearCookie(username)">
+    <input type="button" value="登出" onclick="delCookie(username)">
 </h2>
 
 <h2><a href="index.html">回首頁</a></h2>

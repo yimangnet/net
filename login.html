@@ -79,6 +79,9 @@ function checkCookie() {
         alert("Welcome again " + user);
     } 
 }
+
+
+
 checkCookie(); 
 
 var username = getCookie('username');
@@ -87,11 +90,13 @@ document.write('<h1>歡迎登入:</h2>');
 document.write("<h2>");
 document.write("用戶:"+ username);
 document.write("</h2>");
+<button onclick="delCookie(username) ">登出</button>
 </script> 
+
 <br/>
 
 <h2>
-    <input type="button" value="登出" onclick="delCookie(username)">
+    <input type="button" value="登出" onclick="delCookie(username) ">
 </h2>
 
 <h2><a href="index.html">回首頁</a></h2>

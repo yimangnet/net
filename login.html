@@ -68,7 +68,7 @@ function getCookie (name)
 }
 
 function delCookie(name) {
-   var username = getCookie('username');
+
    var date = new Date();
    date.setTime(date.getTime() - 1000);
    document.cookie = name + "='';expires=" + date.toGMTString();
@@ -82,14 +82,14 @@ function checkCookie() {
     } 
 }
 function delCookie2(){
-    var username = getCookie('username');
-    delCookie(username);
-    if (username==null || username==""){
+    var name = getCookie('username');
+    delCookie(name);
+    if (name==null || name==""){
         alert("使用者尚未登入!" );
     }
     else{
     
-    alert("使用者 "+username+" 已成功登出 " );
+    alert("使用者 "+name+" 已成功登出 " );
     location.reload() 
     
     
@@ -115,24 +115,10 @@ document.write("</h2>");
 
 </script> 
 <br/>
-<input type="button" value="登出(無法使用)" onclick="delCookie(username);"/>
+<input type="button" value="登出(無法使用)" onclick="delCookie2();"/>
 <p class='logout'></p>
 
-<script>
-    function delCookie(name)
-{
-    var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval=getCookie(name);
-    if(cval!=null)
-        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
-}
-    var btn = document.querySelector('.btnclass');
-    var time = document.querySelector('.logout');
 
-    btn.onclick =delCookie(username);
-
-</script>
 </body>
 
 <br/>

@@ -70,14 +70,30 @@ function delCookie(name)
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
     var cval=getCookie(name);
+    
     if(cval!=null)
         document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    
 }
 function checkCookie() {
     var user = getCookie("username");
     if (user != null) {
         alert("Welcome again " + user);
     } 
+}
+function delCookie2(){
+    var username = getCookie('username');
+    if (username==null || username==""){
+        alert("使用者尚未登入!" );
+    }
+    else{
+    alert("使用者 "+username+" 已成功登出 " );
+
+    delCookie(username);
+}
+    
+    
+
 }
 
 
@@ -98,7 +114,7 @@ document.write("</h2>");
 
 </script> 
 <br/>
-<input type="button" class='btnclass' value="登出(無法使用)">
+<input type="button" value="登出" onclick="delCookie2();"/>
 <p class='logout'></p>
 
 <script>

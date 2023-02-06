@@ -67,16 +67,15 @@ function getCookie (name)
 	return null;
 }
 
-function delCookie(name)
-{
-    var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval=getCookie(name);
-    
-    if(cval!=null)
-        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
-    
+function delCookie(name){
+  var exp = new Date();
+  exp.setTime(exp.getTime() - 1);
+  var cval = getCookie(name);
+  if (cval != null) 
+    document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString()+";path=/";
 }
+
+
 function checkCookie() {
     var user = getCookie("username");
     if (user != null) {
@@ -85,11 +84,12 @@ function checkCookie() {
 }
 function delCookie2(){
     var username = getCookie('username');
+    delCookie(username);
     if (username==null || username==""){
         alert("使用者尚未登入!" );
     }
     else{
-    delCookie(username);
+    
     alert("使用者 "+username+" 已成功登出 " );
     location.reload() 
     

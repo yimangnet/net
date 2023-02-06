@@ -68,6 +68,7 @@ function getCookie (name)
 }
 
 function delCookie(name) {
+   var username = getCookie('username');
    var date = new Date();
    date.setTime(date.getTime() - 1000);
    document.cookie = name + "='';expires=" + date.toGMTString();
@@ -114,7 +115,7 @@ document.write("</h2>");
 
 </script> 
 <br/>
-<input type="button" value="登出" onclick="delCookie2();"/>
+<input type="button" value="登出" onclick="delCookie(username);"/>
 <p class='logout'></p>
 
 <script>

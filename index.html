@@ -2,7 +2,8 @@
 <html>
     
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width" ,="" initial-scale="1.0">
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8"></meta>
         <title>意麵網</title>
         <link rel="shortcut icon" href="img/sherry.ico" type="image/x-icon">
@@ -11,11 +12,10 @@
         </style>
     </head>
     <body>
-        <h1 class="one" style="color: red;">歡<h1 class="one" style="color: orange;">迎<h1 class="one" style="color: yellow;">來<h1 class="one" style="color: green;">到<h1 class="one" style="color: blue;">意<h1 class="one" style="color: rgb(99, 202, 250);">麵<h1 class="one" style="color: purple;">網</h1></hr>        
-        <p>
-            史上最陽春的網站
-        </p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">點擊這裡展開奇妙冒險</a>
+
+        <div class="neon" ><b>歡迎來到意麵網</b></div></hr>        
+
+        <a class="word1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">想看好康? 點我</a>
         
 
         <script>
@@ -29,9 +29,9 @@
 
         <br/>
         <hr/>
-        <div style="background-color: rgb(123, 235, 243);">
+        <div class="wrap" style="background-color: rgb(123, 235, 243);">
         <h3>
-        <b>最新公告📢</b>&emsp;&emsp;<marquee direction="right" height="30" scrollamount="20"><I>最新迷因-芭蕾舞已經更新了!</I>&emsp;<a href="menu/迷因區/目錄/ballet.html">點此前往</a></marquee>
+        <b >最新公告📢</b>&emsp;&emsp;<marquee direction="right" height="30" scrollamount="20"><I>最新迷因-芭蕾舞已經更新了!</I>&emsp;<a href="menu/迷因區/目錄/ballet.html">點此前往</a></marquee>
         </h3>
         </div>
         
@@ -61,39 +61,42 @@
 
         var username = getCookie('username');
         if (username == null){
-            document.write('<h3>使用尚未登入!</h3>');
+            document.write('<h1 class="word1 wrap">使用尚未登入!</h1>');
 
         }
         else{
-        document.write('<h3>目前使用者:</h3>');
-        document.write('<h3>');
+        document.write('<h1 class="word1 wrap">目前使用者:</h1>');
+        document.write('<h2 class="word1 wrap">');
         document.write(username);
-        document.write('</h3>');
+        document.write('</h2>');
             
         }
 
         
         
         </script>
+        <div class="wrap">
         <input type="button" value="點此登入/登出" onclick="location.href='login.html'">
         <hr/>
-        <h1>
+        <h1 class="word1 wrap" >
             首頁:
         </h1>
         <h2>
-            <a href="個人簡介/me.html">個人簡介</a>
+            <a class="word1" class="wrap" href="個人簡介/me.html">個人簡介</a>
         </h2>
         <br/>
         <h2>
-            <a href="menu/部落格/blogmenu.html">部落格</a>
+            <a class="word1" href="menu/部落格/blogmenu.html">部落格</a>
         </h2>
         <br/>
 
         <h2>
-            <a href="menu/迷因區/mememenu.html">迷因區</a>
+            <a class="word1" href="menu/迷因區/mememenu.html">迷因區</a>
         </h2>
+    </div>
         <br/>
-        <img src="img/hehe.gif"width="800">
+        <img src="img/hehe.gif" width="800" style="display:block; margin:auto;">
+
         
     </body>
 </html>
